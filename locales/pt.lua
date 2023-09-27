@@ -25,8 +25,6 @@ local Translations = {
         have_evidence_bag = 'Precisas de ter um saco de provas vazio',
         no_driver_license = 'Sem licença de condução',
         not_cuffed_dead = 'O civil não está algemado ou morto',
-        fine_yourself = '???',
-        not_online = "???"
     },
     success = {
         uncuffed = 'Foste desalgemado',
@@ -53,7 +51,7 @@ local Translations = {
         callsign_name = 'Nome do teu indicativo',
         poobject_object = 'Objeto a colocar ou \'delete\' para remover',
         player_id = 'ID do Jogador',
-        citizen_id = 'Citizen ID do Jogador',
+        citizen_id = 'ID do Jogador',
         dna_sample = 'Exemplo DNA',
         jail_time = 'Tempo que o jogador vai estar na prisão',
         jail_time_no = 'O tempo de prisão precisa de ser maior que 0',
@@ -112,9 +110,7 @@ local Translations = {
         target_location = 'A localização de %{firstname} %{lastname} foi marcada no teu mapa',
         anklet_location = 'Localização da Pulseira',
         new_call = 'Nova Chamada',
-        officer_down = 'Agente %{lastname} | %{callsign} Abatido',
-        fine_issued = '???',
-        received_fine = '???'
+        officer_down = 'Agente %{lastname} | %{callsign} Abatido'
     },
     evidence = {
         red_hands = 'Mãos vermelhas',
@@ -176,7 +172,6 @@ local Translations = {
         message_sent = 'Mensagem a ser enviada',
         civilian_call = 'Chamada Civil',
         emergency_call = 'Nova chamda 911',
-        fine = '???'
     },
     progressbar = {
         blood_clear = 'A limpar sangue..',
@@ -184,13 +179,11 @@ local Translations = {
         robbing = 'A roubar pessoa..',
         place_object = 'A colocar objecto..',
         remove_object = 'A remover objeto..',
+        impound = 'Apreender o Veículo..',
     },
 }
 
-if GetConvar('qb_locale', 'en') == 'pt' then
-    Lang = Locale:new({
-        phrases = Translations,
-        warnOnMissing = true,
-        fallbackLang = Lang,
-    })
-end
+Lang = Locale:new({
+    phrases = Translations,
+    warnOnMissing = true
+})

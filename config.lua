@@ -17,49 +17,57 @@ Config.LicenseRank = 2
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
 Config.Locations = {
     ["duty"] = {
-        [1] = vector3(440.085, -974.924, 30.689),
-        [2] = vector3(-449.811, 6012.909, 31.815),
+        [1] = vector3(444.67, -982.21, 30.69),
+        [2] = vector3(-449.01, 6013.75, 32.29),
+        [3] = vector3(382.59, -1597.07, 30.05),
     },
     ["vehicle"] = {
         [1] = vector4(448.159, -1017.41, 28.562, 90.654),
         [2] = vector4(471.13, -1024.05, 28.17, 274.5),
-        [3] = vector4(-455.39, 6002.02, 31.34, 87.93),
+        [3] = vector4(-473.5, 6016.17, 31.34, 312.53),
     },
     ["stash"] = {
         [1] = vector3(453.075, -980.124, 30.889),
     },
     ["impound"] = {
-        [1] = vector3(436.68, -1007.42, 27.32),
-        [2] = vector3(-436.14, 5982.63, 31.34),
+        [1] = vector3(441.11, -963.1, 28.99),
+        [2] = vector3(-441.82, 6026.48, 31.34),
     },
     ["helicopter"] = {
         [1] = vector4(449.168, -981.325, 43.691, 87.234),
         [2] = vector4(-475.43, 5988.353, 31.716, 31.34),
     },
     ["armory"] = {
-        [1] = vector3(462.23, -981.12, 30.68),
+        [1] = vector3(482.54, -995.64, 30.69),
+        [2] = vector3(-445.84, 6018.75, 37.0),
     },
     ["trash"] = {
-        [1] = vector3(439.0907, -976.746, 30.776),
+        [1] = vector3(440.07, -978.57, 30.69),
+        [2] = vector3(-448.11, 6006.86, 32.29),
     },
     ["fingerprint"] = {
-        [1] = vector3(460.9667, -989.180, 24.92),
+        [1] = vector3(474.16, -1013.32, 26.27),
+        [2] = vector3(-440.6, 6010.86, 27.58),
+        [3] = vector3(363.54, -1602.29, 30.05),
     },
     ["evidence"] = {
-        [1] = vector3(442.1722, -996.067, 30.689),
-        [2] = vector3(451.7031, -973.232, 30.689),
-        [3] = vector3(455.1456, -985.462, 30.689),
+        [1] = vector3(446.93, -997.06, 30.69),
+        [2] = vector3(473.95, -1005.37, 26.27),
+        [3] = vector3(-445.24, 6019.29, 32.29),
+        [4] = vector3(-453.0, 5999.37, 37.01),
+        [5] = vector3(380.79, -1608.88, 30.2),
     },
     ["stations"] = {
-        [1] = {label = "PSP", coords = vector4(428.23, -984.28, 29.76, 3.5)},
+        [1] = {label = "Esquadra da PSP", coords = vector4(428.23, -984.28, 29.76, 3.5)},
         [2] = {label = "Prisão", coords = vector4(1845.903, 2585.873, 45.672, 272.249)},
-        [3] = {label = "PSP Paleto", coords = vector4(-451.55, 6014.25, 31.716, 223.81)},
+        --[3] = {label = "Police Station Paleto", coords = vector4(-434.52, 6016.94, 31.49, 311.42)},
+        --[4] = {label = "Davis Police Dept.", coords = vector4(382.58, -1591.07, 29.28, 326.67)},
     },
 }
 
 Config.ArmoryWhitelist = {}
 
-Config.PoliceHelicopter = "POLMAV"
+Config.PoliceHelicopter = "heli_psp"
 
 Config.SecurityCameras = {
     hideradar = false,
@@ -102,62 +110,256 @@ Config.SecurityCameras = {
 }
 
 Config.AuthorizedVehicles = {
-	-- Grade 0
+	-- Nível 0 - Recruta
 	[0] = {
-		["police"] = "Police Car 1",
-		["police2"] = "Police Car 2",
-		["police3"] = "Police Car 3",
-		["police4"] = "Police Car 4",
-		["policeb"] = "Police Car 5",
-		["policet"] = "Police Car 6",
-		["sheriff"] = "Sheriff Car 1",
-		["sheriff2"] = "Sheriff Car 2",
+		["psp_530d"] = " BMW 530D",
 	},
-	-- Grade 1
+	-- Nível 1 - Agente
 	[1] = {
-		["police"] = "Police Car 1",
-		["police2"] = "Police Car 2",
-		["police3"] = "Police Car 3",
-		["police4"] = "Police Car 4",
-		["policeb"] = "Police Car 5",
-		["policet"] = "Police Car 6",
-		["sheriff"] = "Sheriff Car 1",
-		["sheriff2"] = "Sheriff Car 2",
-
+		["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D", 
+        ["bmwgs_psp"] = "Mota EPRI",
 	},
-	-- Grade 2
+	-- Nível 2 - Agente Principal
 	[2] = {
-		["police"] = "Police Car 1",
-		["police2"] = "Police Car 2",
-		["police3"] = "Police Car 3",
-		["police4"] = "Police Car 4",
-		["policeb"] = "Police Car 5",
-		["policet"] = "Police Car 6",
-		["sheriff"] = "Sheriff Car 1",
-		["sheriff2"] = "Sheriff Car 2",
+		["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D",
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
 	},
-	-- Grade 3
+	-- Nível 3 - Agente Coordenador
 	[3] = {
-		["police"] = "Police Car 1",
-		["police2"] = "Police Car 2",
-		["police3"] = "Police Car 3",
-		["police4"] = "Police Car 4",
-		["policeb"] = "Police Car 5",
-		["policet"] = "Police Car 6",
-		["sheriff"] = "Sheriff Car 1",
-		["sheriff2"] = "Sheriff Car 2",
+		["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D", 
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
 	},
-	-- Grade 4
-	[4] = {
-		["police"] = "Police Car 1",
-		["police2"] = "Police Car 2",
-		["police3"] = "Police Car 3",
-		["police4"] = "Police Car 4",
-		["policeb"] = "Police Car 5",
-		["policet"] = "Police Car 6",
-		["sheriff"] = "Sheriff Car 1",
-		["sheriff2"] = "Sheriff Car 2",
-	}
+    -- Nível 4 - Chefe
+    [4] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D",
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+    },
+    -- Nível 5 - Chefe Principal
+    [5] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D",
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+        ["x6_psp"] = "BMW X6",
+    },
+    -- Nível 6 - Chefe Coordenador
+    [6] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D",
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+        ["x6_psp"] = "BMW X6",
+        ["explorer2_psp"] = "Ford Explorer",
+    },
+    -- Nível 7 - Agente Coordenador
+    [7] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D",
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+        ["x6_psp"] = "BMW X6",
+        ["explorer2_psp"] = "Ford Exp Descaracterizada",
+        ["focus_psp"] = "Ford Focus",
+        ["psp_ar8"] = "Audi R8",
+        ["gtr_psp"] = "Nissan GTR",
+    },
+    -- Nível 8 - Comissário
+    [8] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D",
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+        ["x6_psp"] = "BMW X6",
+        ["explorer2_psp"] = "Ford Exp Descaracterizada",
+        ["focus_psp"] = "Ford Focus",
+        ["psp_ar8"] = "Audi R8",
+        ["gtr_psp"] = "Nissan GTR",
+    },
+    -- Nível 9 - SubIntendente
+    [9] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D",
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+        ["x6_psp"] = "BMW X6",
+        ["explorer2_psp"] = "Ford Exp Descaracterizada",
+        ["focus_psp"] = "Ford Focus",
+        ["psp_ar8"] = "Audi R8",
+        ["gtr_psp"] = "Nissan GTR",
+    },
+    -- Nível 10 - Intendente
+    [10] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D",
+        ["bmwgs_psp"] = "Mota EPRI", 
+        ["policesu"] = "Subaru PSP", 
+        ["explorer_psp"] = "Ford Explorer", 
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+        ["x6_psp"] = "BMW X6",
+        ["explorer2_psp"] = "Ford Exp Descaracterizada",
+        ["focus_psp"] = "Ford Focus",
+        ["psp_ar8"] = "Audi R8",
+        ["gtr_psp"] = "Nissan GTR",
+    },
+    -- Nível 11 - SuperIntendente 
+    [11] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D",
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+        ["x6_psp"] = "BMW X6",
+        ["explorer2_psp"] = "Ford Exp Descaracterizada",
+        ["focus_psp"] = "Ford Focus",
+        ["psp_ar8"] = "Audi R8",
+        ["gtr_psp"] = "Nissan GTR",
+    },
+    -- Nível 12 - SuperIntendente Chefe
+    [12] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D",
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+        ["x6_psp"] = "BMW X6",
+        ["explorer2_psp"] = "Ford Exp Descaracterizada",
+        ["focus_psp"] = "Ford Focus",
+        ["psp_ar8"] = "Audi R8",
+        ["gtr_psp"] = "Nissan GTR",
+        ["leon_psp"] = "Seat Leon",
+    },
+    -- Nível 13 - Diretor Nacional Adjunto
+    [13] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D", 
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+        ["x6_psp"] = "BMW X6",
+        ["explorer2_psp"] = "Ford Exp Descaracterizada",
+        ["focus_psp"] = "Ford Focus",
+        ["psp_ar8"] = "Audi R8",
+        ["gtr_psp"] = "Nissan GTR",
+        ["leon_psp"] = "Seat Leon",
+    },
+    -- Nível 14 -  Diretor Nacional
+    [14] = {
+        ["police"] = "Skoda Octavia",
+        ["fiat_psp"] = "Fiat PSP",
+        ["psp_530d"] = "BMW 530D", 
+        ["bmwgs_psp"] = "Mota EPRI",
+        ["policesu"] = "Subaru PSP",
+        ["explorer_psp"] = "Ford Explorer",
+        ["riot psp"] = "Riot Goe",
+        ["chevrolet_psp"] = "Chervolet Goe",
+        ["cla_psp"] = "Mercedes-Benz CLA",
+        ["e63_psp"] = "Mercedes-Benz E63 CSP",
+        ["limo_psp"] = "Limousine CSP",
+        ["ci_psp"] = "Carrinha de Intervenção",
+        ["dodge_psp"] = "Dodge Charger",
+        ["x6_psp"] = "BMW X6",
+        ["explorer2_psp"] = "Ford Exp Descaracterizada",
+        ["focus_psp"] = "Ford Focus",
+        ["psp_ar8"] = "Audi R8",
+        ["gtr_psp"] = "Nissan GTR",
+        ["leon_psp"] = "Seat Leon",
+    }
 }
 
 Config.WhitelistedVehicles = {}
@@ -172,17 +374,17 @@ Config.AmmoLabels = {
 }
 
 Config.Radars = {
-	vector4(-623.44421386719, -823.08361816406, 25.25704574585, 145.0),
-	vector4(-652.44421386719, -854.08361816406, 24.55704574585, 325.0),
-	vector4(1623.0114746094, 1068.9924316406, 80.903594970703, 84.0),
-	vector4(-2604.8994140625, 2996.3391113281, 27.528566360474, 175.0),
-	vector4(2136.65234375, -591.81469726563, 94.272926330566, 318.0),
-	vector4(2117.5764160156, -558.51013183594, 95.683128356934, 158.0),
-	vector4(406.89505004883, -969.06286621094, 29.436267852783, 33.0),
-	vector4(657.315, -218.819, 44.06, 320.0),
-	vector4(2118.287, 6040.027, 50.928, 172.0),
-	vector4(-106.304, -1127.5530, 30.778, 230.0),
-	vector4(-823.3688, -1146.980, 8.0, 300.0),
+	--vector4(-623.44421386719, -823.08361816406, 25.25704574585, 145.0),
+	--vector4(-652.44421386719, -854.08361816406, 24.55704574585, 325.0),
+	--vector4(1623.0114746094, 1068.9924316406, 80.903594970703, 84.0),
+	--vector4(-2604.8994140625, 2996.3391113281, 27.528566360474, 175.0),
+	--vector4(2136.65234375, -591.81469726563, 94.272926330566, 318.0),
+	--vector4(2117.5764160156, -558.51013183594, 95.683128356934, 158.0),
+	--vector4(406.89505004883, -969.06286621094, 29.436267852783, 33.0),
+	--vector4(657.315, -218.819, 44.06, 320.0),
+	--vector4(2118.287, 6040.027, 50.928, 172.0),
+	--vector4(-106.304, -1127.5530, 30.778, 230.0),
+	--vector4(-823.3688, -1146.980, 8.0, 300.0),
 }
 
 Config.CarItems = {
@@ -214,7 +416,7 @@ Config.Items = {
     slots = 30,
     items = {
         [1] = {
-            name = "weapon_pistol",
+            name = "weapon_combatpistol",
             price = 0,
             amount = 1,
             info = {
@@ -225,7 +427,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 1,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [2] = {
             name = "weapon_stungun",
@@ -236,11 +438,11 @@ Config.Items = {
             },
             type = "weapon",
             slot = 2,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {0 ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [3] = {
             name = "weapon_pumpshotgun",
-            price = 0,
+            price = 200000,
             amount = 1,
             info = {
                 serie = "",
@@ -250,7 +452,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 3,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [4] = {
             name = "weapon_smg",
@@ -265,11 +467,11 @@ Config.Items = {
             },
             type = "weapon",
             slot = 4,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [5] = {
             name = "weapon_carbinerifle",
-            price = 0,
+            price = 200000,
             amount = 1,
             info = {
                 serie = "",
@@ -280,7 +482,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 5,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [6] = {
             name = "weapon_nightstick",
@@ -289,7 +491,7 @@ Config.Items = {
             info = {},
             type = "weapon",
             slot = 6,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {0 ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [7] = {
             name = "pistol_ammo",
@@ -298,7 +500,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 7,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [8] = {
             name = "smg_ammo",
@@ -307,7 +509,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 8,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [9] = {
             name = "shotgun_ammo",
@@ -316,7 +518,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 9,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [10] = {
             name = "rifle_ammo",
@@ -325,7 +527,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 10,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [11] = {
             name = "handcuffs",
@@ -334,7 +536,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 11,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {0 ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [12] = {
             name = "weapon_flashlight",
@@ -343,7 +545,7 @@ Config.Items = {
             info = {},
             type = "weapon",
             slot = 12,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {0 ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [13] = {
             name = "empty_evidence_bag",
@@ -352,7 +554,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 13,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {0 ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [14] = {
             name = "police_stormram",
@@ -361,7 +563,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 14,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {7, 8, 9, 10, 11, 12, 13, 14}
         },
         [15] = {
             name = "armor",
@@ -370,7 +572,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 15,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {0 ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [16] = {
             name = "radio",
@@ -379,7 +581,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 16,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {0 ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [17] = {
             name = "heavyarmor",
@@ -388,7 +590,16 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 17,
-            authorizedJobGrades = {0, 1, 2, 3, 4}
+            authorizedJobGrades = {6, 7, 8, 9, 10, 11, 12, 13, 14}
+        },
+        [18] = {
+            name = "pdbadge",
+            price = 80,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 18,
+            authorizedJobGrades = {13, 14}
         }
     }
 }
